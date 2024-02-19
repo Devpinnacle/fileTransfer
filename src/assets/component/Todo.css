@@ -1,0 +1,31 @@
+.inline{
+    display: flex
+}
+.left{
+    margin-left: 10px;
+}
+.round{
+    border-radius: 100%;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+}
+
+.form{
+    position: fixed;
+    right: 10%;
+    bottom: 20%;
+    padding: 25px;
+    border: 1px solid gray;
+    border-radius:5% ;
+}
+.flex{
+    float: left;
+}
+
+<select className="form-control" id="sel1" onChange={(e) => setStId(e.target.value)}>
+                    <option>--select--</option>
+                     {state1.map((st) => (
+                 <option key={st._id} value={st._id}>{st.state_name}</option>
+                        ))}
+                    </select>
